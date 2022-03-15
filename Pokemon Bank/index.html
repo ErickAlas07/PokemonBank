@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon Bank</title>
+
+    <!-- Primera fila de botonesinculación de archivos css a utilizar -->
+    
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Sección Principal (capa uno) -->
+    <section class="principal container-md">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-12, col-md-8 capa ml-auto mb-2">
+            <!-- Div que contiene el logo de Pokémon Bank y a su vez una división -->
+            <div class="interfaz">
+                <img src="images/bgpokemon2.png" class="img-fluid rounded img-poke" alt="Logo pokémon bank"/>
+                <hr class="dividor"/>
+          </div>
+
+          <!-- Saludo inicial -->
+          <div id="inicio" class="container-md inicio">
+                <p class="saludo">Bienvenido al Pokémon Bank ATM.</p>
+                <p class="saludo2 mt-md-5">Introduzca el número de cuenta.</p>
+                <br/><br/><br/>
+                <!-- Span en el cual se escribirá el número de cuenta -->
+                <span class="text-center text-light" id="cuenta"></span>
+                <br />
+                <hr class="guion" />
+          </div>
+
+          <!-- Credencial incorrecta -->
+          <div class="errorCuenta text-center mt-5">
+              <!-- etiqueta p que tendrá el mensaje de error al momento de iniciar con una cuenta incorrecta -->
+                <p id="errorNum" class="text-danger"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Fin de section principal -->
+
+<!-- Sección Secundaria (capa dos) -->
+    <section class="secundaria container-md">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-12, col-md-8 capa2 ml-auto mb-2">
+          <div class="interfaz">
+              <!-- Div que contiene el logo de Pokémon Bank y a su vez una división -->
+            <img src="images/bgpokemon2.png" class="img-fluid rounded img-poke" alt="Logo pokémon bank"/>
+            <hr class="dividor" />
+          </div>
+
+          <!-- Saludo al usuario -->
+          <div id="inicio" class="container-md inicio">
+                <p class="saludo">¡Bienvenido Ash Ketchum!</p>
+                <!-- Instrucción para agregar el PIN -->
+                <p class="saludo2 mt-md-5">Introduzca el PIN.</p>
+                <br/><br/><br/>
+                <!-- Span en el cual se escribirá el PIN de cuenta -->
+                <span class="text-center text-light" id="pinCuent"></span>
+                <br/>
+                <hr class="guion" />
+          </div>
+
+          <!-- Credencial incorrecta -->
+          <div class="errorPin text-center mt-5">
+               <!-- etiqueta p que tendrá el mensaje de error al momento de introducir un pin incorrecto -->
+            <p id="errorNum" class="text-danger"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Fin de sección secundaria -->
+
+<!-- Sección de transacciones -->
+    <section class="tercera container-md">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-12, col-md-8 capa3 ml-auto mb-2">
+            <div class="interfaz">
+                <img src="images/bgpokemon2.png"  class="img-fluid rounded img-poke" alt="Logo pokémon bank"/>
+                <hr class="dividor" />
+            </div>
+
+            <!-- Ventana dónde se muestran las transacciones a realizar -->
+            <div id="inicio" class="container-md inicio">
+                <!-- Datos del usuario -->
+                    <div class="datos">
+                        <p class="nombreUser">Ash Ketchum</p>
+                        <p class="cuentaUser">Cuenta: 0987654321</p>
+                    </div>
+                    <br/><br/><br/>
+
+                    <!-- Div que contiene las opciones de transacciones -->
+                    <div class="transa">
+                        <!-- Div del primer bloque -->
+                    <div class="primer">
+                        <button id="depositar">Depositar efectivo</button>
+                        <button id="retirar">Retirar efectivo</button>
+                    </div>
+                    
+                <!-- Logo del cajero Pokémon Bank     -->
+                <img src="images/bgpokemon.png" class="img-fluid rounded img-poke2" alt="Logo pokémon bank"/>
+                <!-- Div del Segundo bloque -->
+                <div class="segundo">
+                    <button id="consultar">Consultar saldo</button>
+                    <button id="pagar">Pagar servicios</button>
+                </div>
+                <!-- Botón para salir -->
+                    <button id="salir" class="bg-danger mt-5">Salir</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+<!-- Fin de sección de transacciones -->
+
+<!-- Sección de página de historial -->
+    <section class="cuarta container-md">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-12, col-md-8 capa4 ml-auto mb-2">
+          <div class="interfaz">
+                <img src="images/bgpokemon2.png" class="img-fluid rounded img-poke" alt="Logo pokémon bank"/>
+                <hr class="dividor" />
+          </div>
+
+          <!-- Título del historial -->
+          <div class="titulo text-center mt-5">
+            <h3>Historial de transacciones</h3>
+          </div>
+          
+          <!-- Tabla que recoge datos sobre las transacciones -->
+          <div class="tablaT text-center mt-4">
+            <table class="table text-light table-bordered">
+              <thead>
+                <tr class="table-light border-dark">
+                  <th scope="col">#</th>
+                  <th scope="col">Tipo</th>
+                  <th scope="col">Monto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan=""></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Div que contiene los botones de salir y visualizar un gráfico -->
+          <div class="opc">
+                <span class="btnExit"><button id="btnexit">Salir</button></span>
+                <span class="btnGra"><button id="btngrafico">Ver gráfico</button></span>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Fin de sección de historial -->
+
+
+<!-- Sección de página de gráfico -->
+    <section class="quinta container-md">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-12, col-md-8 capa5 ml-auto mb-2">
+          <div class="interfaz">
+                <img  src="images/bgpokemon2.png" class="img-fluid rounded img-poke" alt="Logo pokémon bank"/>
+                <hr class="dividor"/>
+          </div>
+
+          <!-- Título de la ventana -->
+          <div class="titulo text-center mt-5">
+                <h3>Tipo de transacciones realizadas</h3>
+          </div>
+
+          <!-- Div que contendrá el gráfico, el cual se hará con librería Chart.js -->
+          <div class="graphic mt-4"></div>
+          <div class="opc">
+              <!-- Botón salir -->
+            <span class="btnExit"><button id="btnexit">Salir</button></span>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Fin de sección de gráficos -->
+
+
+<!-- Sección de Botones del cajero -->
+    <section id="botones">
+      <div class="container d-flex justify-content-center">
+        <div class="row">
+          <div class="col-md-12 btnAtm">
+           <!-- Primera fila de botones -->
+            <div id="com" class="mt-3">
+                <button class="mx-2 btnum" id="b1">1</button>
+                <button class="mx-2 btnum" id="b2">2</button>
+                <button class="mx-2 btnum" id="b3">3</button>
+                <button class="bg-danger btnop" id="cancelar">CANCEL</button>
+            </div>
+
+            <div class="col-md-12">
+               <!-- Segunda fila de botones -->
+              <div id="com">
+                    <button class="mx-2 btnum" id="b4">4</button>
+                    <button class="mx-2 btnum" id="b5">5</button>
+                    <button class="mx-2 btnum" id="b6">6</button>
+                    <button class="bg-warning btnop" id="limpiar">CLEAR</button>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+                <!-- Tercera fila de botones -->
+              <div id="com">
+                    <button class="mx-2 btnum" id="b7">7</button>
+                    <button class="mx-2 btnum" id="b8">8</button>
+                    <button class="mx-2 btnum" id="b9">9</button>
+                    <button class="bg-success btnop" id="entrar">ENTER</button>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+                <!-- Cuarta fila de botones -->
+              <div id="com" class="mb-3">
+                    <button class="mx-2 btnum" id="b10">-</button>
+                    <button class="mx-2 btnum" id="b0">0</button>
+                    <button class="mx-2 btnum" id="b11">+</button>
+                    <button class="btnop">...</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Fin de sección de botones -->
+
+ <!-- Pie de página -->
+ <footer class="footer">
+  <div class="pie">
+      <span>GRUPO C - DAW.</span>
+      <br>
+      <p>© Derechos Reservados - 2022.</p>
+  </div>
+</footer>
+
+
+
+
+<!-- Vinculación de los archivos js a utilizar -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/pokebank.js"></script>
+  </body>
+</html>

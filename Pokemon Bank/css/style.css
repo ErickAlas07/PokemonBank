@@ -1,0 +1,277 @@
+body {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Quicksand', sans-serif;
+    backdrop-filter: blur(0px);
+}
+
+/* Estilos de capas */
+.capa{
+    padding-top: 10px;
+    margin-top: 40px;
+    border: 10px solid rgba(0, 0, 0, 0.925);
+    background-color: rgba(0, 0, 0, 0.925);
+    min-height: 85vh; 
+    height: 85vh;
+}
+
+.capa2{
+    padding-top: 10px;
+    margin-top: 50px;
+    border: 10px solid rgba(0, 0, 0, 0.925);
+    background-color: rgba(0, 0, 0, 0.801);
+    min-height: 85vh; 
+    height: 85vh;
+}
+
+.capa3{
+    padding-top: 10px;
+    margin-top: 50px;
+    border: 10px solid rgba(0, 0, 0, 0.925);
+    background-color: rgba(0, 0, 0, 0.801);
+    min-height: 105h; 
+    height: 105vh;
+}
+
+.capa4{
+    padding-top: 10px;
+    margin-top: 50px;
+    border: 10px solid rgba(0, 0, 0, 0.925);
+    background-color: rgba(0, 0, 0, 0.801);
+    min-height: 105vh; 
+    height: 105vh;
+}
+
+.capa5{
+    padding-top: 10px;
+    margin-top: 50px;
+    border: 10px solid rgba(0, 0, 0, 0.925);
+    background-color: rgba(0, 0, 0, 0.801);
+    min-height: 120vh; 
+    height: 120vh;
+}
+
+/* Estilo para el logo */
+.img-poke{
+    width: 125px;
+    height: 90px;
+}
+
+.img-poke2{
+    width: 125px;
+    height: 125px;
+}
+
+ /* EStilos para los saludos */
+.saludo
+{
+    font-weight:bold;
+    color:#f0b51c;
+    font-size: 2rem;
+    display: block;
+    text-transform:uppercase ;
+    margin-top: 40px;
+    text-shadow:0.5px -1px 1px #fff;
+}
+
+.saludo2
+{
+    font-weight:bold;
+    color:#3362ad;
+    font-size: 1.7rem;
+    left:29px;
+    top:30px;
+    text-shadow:0.5px 0px 1px #fff;
+    letter-spacing: 1px;
+}
+
+/* Estilo para div inicio */
+.inicio{
+    text-align: center; 
+}
+
+/* Estilos para los títulos */
+.titulo{
+    letter-spacing: 1px;
+    font-size: 40px;
+    font-weight:bold;
+    color:#3362ad;
+    text-shadow:0.5px 0px 1px #fff;
+}
+
+/* Estilos para las opciones ver gráfico y ver historial */
+.opc{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilos para botón de ver gráfico */
+.btnGra{
+    margin-top: 50px;
+}
+
+#btngrafico{
+    color: #000;
+    background-color: #f0b51c;
+    width: 100px;
+    height: 50px;
+    letter-spacing: 1px;
+    border: 5px solid #000;
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+/* Estilos para botón de Salir */
+.btnExit{
+    margin-top: 50px;  
+}
+
+#btnexit{
+    color:#000;
+    background-color: #fa5651;
+    width: 100px;
+    height: 50px;
+    letter-spacing: 1px;
+    border: 5px solid #000;
+    font-weight: bolder;
+}
+
+/* Estilo para el divisor */
+.dividor{
+    width: 100%;
+    border: 3px dashed #f0b51c;
+}
+
+/* Estilos para el guión donde se escribirá cada número */
+.guion{
+    width: 25%;
+    border: 2px solid #f0b51c;
+    margin: 0 auto;
+}
+
+.numcuenta{
+    color:#f0b51c;
+}
+
+/* Estilos para errores en número de cuenta */
+#errorNum{
+    color: red;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+
+/* Estilos para el ingreso de número de cuenta */
+#cuenta{
+    font-size: 1rem;
+    letter-spacing: 3px;
+}
+
+/* Estilos para los botones numéricos y de opciones  del teclado del cajero */
+.btnAtm{
+    border: 5px solid #000;
+    background-color: rgb(170, 170, 170);
+}
+
+.btnum{
+    width: 70px;
+    height: 50px;
+    background: silver;
+    border: 4px solid rgb(29, 29, 29);
+    border-radius: 10%;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.btnop{
+    width: 100px;
+    height: 50px;
+    border: 3px solid #000;
+    background-color: silver;
+    margin-bottom: 5px;
+    border-radius: 10%;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+/* Estilo para nombre de usuario y número de cuenta */
+.datos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nombreUser, .cuentaUser{
+    font-size: 25px;
+    color: #f0b51c;
+}
+
+/* Div de transacciones */
+.transa{
+    display: block;
+}
+
+/* Estilos para primer y segundo bloque de botones */
+.primer, .segundo{
+  display: flex;
+  justify-content: space-between;
+   
+}
+
+/* Estilos para los botones de las transacciones */
+#depositar, #retirar, #consultar, 
+#pagar, #historial, #grafico{
+    width: 150px;
+    height: 70px;
+    border: 3px solid #000;
+    background-color: rgb(247, 214, 177);
+    margin-bottom: 5px;
+    border-radius: 10%;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+/* Estilos para el botón salir */
+#salir{
+    width: 100px;
+    height: 40px;
+    margin-top: 60px;
+    border: 3px solid #000;
+    color: #fff;
+    margin-bottom: -105px;
+    border-radius: 10%;
+    font-size: 1rem;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+/* Estilos para el botón del gráfico */
+.graphic{
+    width: 90%px;
+    background-color: #fff;
+    height: 50%;
+}
+
+.footer{
+	background-color: #161616;
+	min-height: 90px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    margin-top: 50px;
+}
+
+.pie{
+	margin-top: 25px;
+	width: 70%;
+	height: 70%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	color: #fff;
+	border-radius: 3px;
+}
