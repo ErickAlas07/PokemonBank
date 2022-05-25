@@ -18,7 +18,7 @@ body {
     height: 85vh;
 }
 
-.capa2{
+.capa2, .capa6, .capa7{
     padding-top: 10px;
     margin-top: 50px;
     border: 10px solid rgba(0, 0, 0, 0.925);
@@ -45,13 +45,28 @@ body {
     height: 105vh;
 }
 
-.capa5{
+.capa5 {
     padding-top: 10px;
     margin-top: 50px;
     border: 10px solid rgba(0, 0, 0, 0.925);
     background-color: rgba(0, 0, 0, 0.801);
     min-height: 120vh; 
     height: 120vh;
+}
+
+#exit{
+    font-weight: bolder;
+    margin-bottom: 50px;
+}
+
+.capa-final {
+    padding-top: 10px;
+   
+    margin-top: 50px;
+    border: 10px solid rgba(0, 0, 0, 0.925);
+    background-color: rgba(0, 0, 0, 0.801);
+    min-height: 100vh; 
+    height: 100vh;
 }
 
 /* Estilo para el logo */
@@ -102,6 +117,12 @@ body {
     text-shadow:0.5px 0px 1px #fff;
 }
 
+.titulo-salida{
+    font-size: 40px;
+    font-weight: 800;
+    color:#3362ad;
+    
+}
 /* Estilos para las opciones ver gráfico y ver historial */
 .opc{
     display: flex;
@@ -156,14 +177,6 @@ body {
     color:#f0b51c;
 }
 
-/* Estilos para errores en número de cuenta */
-#errorNum{
-    color: red;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: bolder;
-}
-
 /* Estilos para el ingreso de número de cuenta */
 #cuenta{
     font-size: 1rem;
@@ -198,6 +211,13 @@ body {
     font-weight: bolder;
 }
 
+.btn-pie{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    font-weight: 800;
+   
+}
 /* Estilo para nombre de usuario y número de cuenta */
 .datos{
     display: flex;
@@ -214,6 +234,14 @@ body {
     display: block;
 }
 
+/*********** Saldo inicial y actual del usuario ***************/
+.labelInicial, .labelActual{
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: bolder;
+    color:#f0b51c;
+}
+
 /* Estilos para primer y segundo bloque de botones */
 .primer, .segundo{
   display: flex;
@@ -221,9 +249,15 @@ body {
    
 }
 
+.bloque-servicios{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
 /* Estilos para los botones de las transacciones */
 #depositar, #retirar, #consultar, 
-#pagar, #historial, #grafico{
+#pagar, #energia, #agua, #internet, #historial, #grafico{
     width: 150px;
     height: 70px;
     border: 3px solid #000;
@@ -248,10 +282,15 @@ body {
     letter-spacing: 2px;
 }
 
+/* Estilos de ventana salir */ 
+.bg-cuerpo{
+    padding: 50px 30px;
+    background-color: rgba(238, 237, 237, 0.801);
+}
 /* Estilos para el botón del gráfico */
 .graphic{
     width: 90%px;
-    background-color: #fff;
+    
     height: 50%;
 }
 

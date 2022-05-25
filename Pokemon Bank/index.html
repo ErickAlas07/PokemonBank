@@ -15,7 +15,7 @@
   </head>
   <body>
     <!-- Sección Principal (capa uno) -->
-    <section class="principal container-md">
+    <div class="principal container-md" id="uno">
       <div class="row d-flex justify-content-center">
         <div class="col-sm-12, col-md-8 capa ml-auto mb-2">
             <!-- Div que contiene el logo de Pokémon Bank y a su vez una división -->
@@ -34,19 +34,64 @@
                 <br />
                 <hr class="guion" />
           </div>
-
-          <!-- Credencial incorrecta -->
-          <div class="errorCuenta text-center mt-5">
-              <!-- etiqueta p que tendrá el mensaje de error al momento de iniciar con una cuenta incorrecta -->
-                <p id="errorNum" class="text-danger"></p>
-          </div>
         </div>
       </div>
-    </section>
-<!-- Fin de section principal -->
+   
 
-<!-- Sección Secundaria (capa dos) -->
-    <section class="secundaria container-md">
+      <!-- Sección de Botones del cajero -->
+      <div id="botones">
+     
+        <div class="container d-flex justify-content-center">
+          <div class="row">
+            <div class="col-md-12 btnAtm">
+             <!-- Primera fila de botones -->
+              <div id="com" class="mt-3">
+                  <button class="mx-2 btnum" id="b1"  onclick='document.getElementById("cuenta").textContent = cuenta.textContent + "1" '>1</button>
+                  <button class="mx-2 btnum" id="b2"  onclick='document.getElementById("cuenta").textContent = cuenta.textContent + "2" '>2</button>
+                  <button class="mx-2 btnum" id="b3"  onclick='document.getElementById("cuenta").textContent = cuenta.textContent + "3" '>3</button>
+                  <button class="bg-danger btnop" id="cancelar" onclick="salir()">CANCEL</button>
+              </div>
+          
+              <div class="col-md-12">
+                 <!-- Segunda fila de botones -->
+                <div id="com">
+                      <button class="mx-2 btnum" id="b4" onclick='document.getElementById("cuenta").textContent = cuenta.textContent + "4" '>4</button>
+                      <button class="mx-2 btnum" id="b5" onclick='document.getElementById("cuenta").textContent = cuenta.textContent + "5" '>5</button>
+                      <button class="mx-2 btnum" id="b6" onclick='document.getElementById("cuenta").textContent = cuenta.textContent + "6" '>6</button>
+                      <button class="bg-warning btnop" id="limpiar" onclick="limpiar()">CLEAR</button>
+                </div>
+              </div>
+          
+              <div class="col-md-12">
+                  <!-- Tercera fila de botones -->
+                <div id="com">
+                      <button class="mx-2 btnum" id="b7" onclick='document.getElementById("cuenta").textContent = cuenta.textContent + "7" '>7</button>
+                      <button class="mx-2 btnum" id="b8" onclick='document.getElementById("cuenta").textContent = cuenta.textContent + "8" '>8</button>
+                      <button class="mx-2 btnum" id="b9" onclick='document.getElementById("cuenta").textContent = cuenta.textContent + "9" '>9</button>
+                      <button class="bg-success btnop" id="entrar" onclick="ir()">ENTER</button>
+                </div>
+              </div>
+          
+              <div class="col-md-12">
+                  <!-- Cuarta fila de botones -->
+                <div id="com" class="mb-3">
+                      <button class="mx-2 btnum" id="b10" onclick='document.getElementById("cuenta").textContent = cuenta.textContent + "-" '>-</button>
+                      <button class="mx-2 btnum" id="b0" onclick='document.getElementById("cuenta").textContent = cuenta.textContent + "0" '>0</button>
+                      <button class="mx-2 btnum" id="b11" onclick='document.getElementById("cuenta").textContent = cuenta.textContent + "+" '>+</button>
+                      <button class="btnop">...</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+    
+      </div>
+      <!-- Fin de sección de botones -->
+    </div>
+    <!-- Fin de section principal -->
+
+    <!-- Sección Secundaria (capa dos) -->
+    <div class="secundaria container-md" id="dos">
       <div class="row d-flex justify-content-center">
         <div class="col-sm-12, col-md-8 capa2 ml-auto mb-2">
           <div class="interfaz">
@@ -57,12 +102,12 @@
 
           <!-- Saludo al usuario -->
           <div id="inicio" class="container-md inicio">
-                <p class="saludo">¡Bienvenido Ash Ketchum!</p>
+                <p class="saludo" id="saludo"></p>
                 <!-- Instrucción para agregar el PIN -->
                 <p class="saludo2 mt-md-5">Introduzca el PIN.</p>
                 <br/><br/><br/>
                 <!-- Span en el cual se escribirá el PIN de cuenta -->
-                <span class="text-center text-light" id="pinCuent"></span>
+                <span class="text-center text-light" id="pinCuenta"></span>
                 <br/>
                 <hr class="guion" />
           </div>
@@ -74,11 +119,60 @@
           </div>
         </div>
       </div>
-    </section>
-<!-- Fin de sección secundaria -->
 
-<!-- Sección de transacciones -->
-    <section class="tercera container-md">
+      <!-- Sección de Botones del cajero -->
+      <div id="botones">
+
+        <div class="container d-flex justify-content-center">
+          <div class="row">
+            <div class="col-md-12 btnAtm">
+              <!-- Primera fila de botones -->
+              <div id="com" class="mt-3">
+                  <button class="mx-2 btnum" id="b1" onclick='document.getElementById("pinCuenta").textContent = pinCuenta.textContent + "1" '>1</button>
+                  <button class="mx-2 btnum" id="b2" onclick='document.getElementById("pinCuenta").textContent = pinCuenta.textContent + "2" '>2</button>
+                  <button class="mx-2 btnum" id="b3" onclick='document.getElementById("pinCuenta").textContent = pinCuenta.textContent + "3" '>3</button>
+                  <button class="bg-danger btnop" id="cancelar" onclick="salir()">CANCEL</button>
+              </div>
+          
+              <div class="col-md-12">
+                  <!-- Segunda fila de botones -->
+                <div id="com">
+                      <button class="mx-2 btnum" id="b4" onclick='document.getElementById("pinCuenta").textContent = pinCuenta.textContent + "4" '>4</button>
+                      <button class="mx-2 btnum" id="b5"  onclick='document.getElementById("pinCuenta").textContent = pinCuenta.textContent + "5" '>5</button>
+                      <button class="mx-2 btnum" id="b6"  onclick='document.getElementById("pinCuenta").textContent = pinCuenta.textContent + "6" '>6</button>
+                      <button class="bg-warning btnop" id="limpiar" onclick="limpiar()">CLEAR</button>
+                </div>
+              </div>
+          
+              <div class="col-md-12">
+                  <!-- Tercera fila de botones -->
+                <div id="com">
+                      <button class="mx-2 btnum" id="b7"  onclick='document.getElementById("pinCuenta").textContent = pinCuenta.textContent + "7" '>7</button>
+                      <button class="mx-2 btnum" id="b8"  onclick='document.getElementById("pinCuenta").textContent = pinCuenta.textContent + "8" '>8</button>
+                      <button class="mx-2 btnum" id="b9"  onclick='document.getElementById("pinCuenta").textContent = pinCuenta.textContent + "9" '>9</button>
+                      <button class="bg-success btnop" id="entrar" onclick="pinLogin()">ENTER</button>
+                </div>
+              </div>
+          
+              <div class="col-md-12">
+                  <!-- Cuarta fila de botones -->
+                <div id="com" class="mb-3">
+                      <button class="mx-2 btnum" id="b10"  onclick='document.getElementById("pinCuenta").textContent = pinCuenta.textContent + "-" '>-</button>
+                      <button class="mx-2 btnum" id="b0"  onclick='document.getElementById("pinCuenta").textContent = pinCuenta.textContent + "0" '>0</button>
+                      <button class="mx-2 btnum" id="b11"  onclick='document.getElementById("pinCuenta").textContent = pinCuenta.textContent + "+" '>+</button>
+                      <button class="btnop">...</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
+      <!-- Fin de sección de botones -->
+    </div>
+    <!-- Fin de sección secundaria -->
+
+    <!-- Menú de Banco -->
+    <div class="tercera container-md" id="tres">
       <div class="row d-flex justify-content-center">
         <div class="col-sm-12, col-md-8 capa3 ml-auto mb-2">
             <div class="interfaz">
@@ -89,108 +183,495 @@
             <!-- Ventana dónde se muestran las transacciones a realizar -->
             <div id="inicio" class="container-md inicio">
                 <!-- Datos del usuario -->
-                    <div class="datos">
-                        <p class="nombreUser">Ash Ketchum</p>
-                        <p class="cuentaUser">Cuenta: 0987654321</p>
-                    </div>
-                    <br/><br/><br/>
+                <div class="datos">
+                    <p class="nombreUser"></p>
+                    <p class="cuentaUser"></p>
+                </div>
+                <br/><br/><br/>
 
-                    <!-- Div que contiene las opciones de transacciones -->
-                    <div class="transa">
-                        <!-- Div del primer bloque -->
+                <!-- Div que contiene las opciones de transacciones -->
+                <div class="transa">
+                    <!-- Div del primer bloque -->
                     <div class="primer">
-                        <button id="depositar">Depositar efectivo</button>
-                        <button id="retirar">Retirar efectivo</button>
+                        <button id="depositar" onclick="depositar()">Depositar efectivo</button>
+                        <button id="retirar" onclick="retirar()">Retirar efectivo</button>
                     </div>
                     
-                <!-- Logo del cajero Pokémon Bank     -->
-                <img src="images/bgpokemon.png" class="img-fluid rounded img-poke2" alt="Logo pokémon bank"/>
-                <!-- Div del Segundo bloque -->
-                <div class="segundo">
-                    <button id="consultar">Consultar saldo</button>
-                    <button id="pagar">Pagar servicios</button>
-                </div>
-                <!-- Botón para salir -->
-                    <button id="salir" class="bg-danger mt-5">Salir</button>
+                    <!-- Logo del cajero Pokémon Bank     -->
+                    <img src="images/bgpokemon.png" class="img-fluid rounded img-poke2" alt="Logo pokémon bank"/>
+                    <!-- Div del Segundo bloque -->
+                    <div class="segundo">
+                        <button id="consultar" onclick="mostrarHistorial()">Historial</button>
+                        <button id="pagar" onclick="services()">Pagar servicios</button>
+                    </div>
+                    <!-- Botón para salir -->
+                        <button id="salir" class="bg-danger mt-5" onclick="salir()">Salir</button>
                 </div>
             </div>
         </div>
       </div>
-    </section>
-<!-- Fin de sección de transacciones -->
+    </div>
+    <!-- Fin de Menú de Banco -->
 
-<!-- Sección de página de historial -->
-    <section class="cuarta container-md">
+
+    <!-- Primera transacción, depositar efectivo -->
+    <div class="firstOp container-md" id="tresuno">
       <div class="row d-flex justify-content-center">
-        <div class="col-sm-12, col-md-8 capa4 ml-auto mb-2">
+        <div class="col-sm-12, col-md-8 capa6 ml-auto mb-2">
           <div class="interfaz">
-                <img src="images/bgpokemon2.png" class="img-fluid rounded img-poke" alt="Logo pokémon bank"/>
-                <hr class="dividor" />
+              <!-- Div que contiene el logo de Pokémon Bank y a su vez una división -->
+            <img src="images/bgpokemon2.png" class="img-fluid rounded img-poke" alt="Logo pokémon bank"/>
+            <hr class="dividor" />
           </div>
 
-          <!-- Título del historial -->
-          <div class="titulo text-center mt-5">
-            <h3>Historial de transacciones</h3>
+          <!-- Saludo al usuario -->
+          <div id="inicio" class="container-md inicio">
+            <!-- Datos del usuario -->
+            <div class="datos">
+              <p class="nombreUser" id="nombreUser"></p>
+              <p class="cuentaUser" id="cuentaUser"></p>
           </div>
-          
-          <!-- Tabla que recoge datos sobre las transacciones -->
-          <div class="tablaT text-center mt-4">
-            <table class="table text-light table-bordered">
-              <thead>
-                <tr class="table-light border-dark">
-                  <th scope="col">#</th>
-                  <th scope="col">Tipo</th>
-                  <th scope="col">Monto</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td colspan=""></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">4</th>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">6</th>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
+          <br>
+          <div class="saldos">
+            <p class="labelInicial" id="labelInicial"></p>
+            <p class="labelActual" id="labelActual"></p>
           </div>
+                <br/><br/>
+                <!-- Span en el cual se escribirá el PIN de cuenta -->
+                <span class="text-center text-light" id="montoDeposito"></span>
+                <br/>
+                <hr class="guion" id="guion" />
 
-          <!-- Div que contiene los botones de salir y visualizar un gráfico -->
-          <div class="opc">
-                <span class="btnExit"><button id="btnexit">Salir</button></span>
-                <span class="btnGra"><button id="btngrafico">Ver gráfico</button></span>
+                <div class="btn-pie pt-5">
+                  <!-- Botón para retroceder -->
+                <button id="atras" class="bg-danger px-3 py-2 text-light btnAtras" onclick="retroceder()">Atrás</button>
+                <!-- Botón para imprimir recibo en pdf -->
+                <button id="pdf" class="bg-success px-3 py-2 text-light" onclick="printPDF()">Imprimir recibo</button>
+                </div>
           </div>
         </div>
       </div>
-    </section>
-<!-- Fin de sección de historial -->
+
+    <!-- Sección de Botones del cajero -->
+    <div id="botones">
+        
+      <div class="container d-flex justify-content-center">
+        <div class="row">
+          <div class="col-md-12 btnAtm">
+          <!-- Primera fila de botones -->
+            <div id="com" class="mt-3">
+                <button class="mx-2 btnum" id="b1"  onclick='document.getElementById("montoDeposito").textContent = montoDeposito.textContent + "1" '>1</button>
+                <button class="mx-2 btnum" id="b2"  onclick='document.getElementById("montoDeposito").textContent = montoDeposito.textContent + "2" '>2</button>
+                <button class="mx-2 btnum" id="b3"  onclick='document.getElementById("montoDeposito").textContent = montoDeposito.textContent + "3" '>3</button>
+                <button class="bg-danger btnop" id="cancelar" onclick="salir()">CANCEL</button>
+            </div>
+        
+            <div class="col-md-12">
+              <!-- Segunda fila de botones -->
+              <div id="com">
+                    <button class="mx-2 btnum" id="b4" onclick='document.getElementById("montoDeposito").textContent = montoDeposito.textContent + "4" '>4</button>
+                    <button class="mx-2 btnum" id="b5" onclick='document.getElementById("montoDeposito").textContent = montoDeposito.textContent + "5" '>5</button>
+                    <button class="mx-2 btnum" id="b6" onclick='document.getElementById("montoDeposito").textContent = montoDeposito.textContent + "6" '>6</button>
+                    <button class="bg-warning btnop" id="limpiar" onclick='document.getElementById("montoDeposito").textContent = "" '>CLEAR</button>
+              </div>
+            </div>
+        
+            <div class="col-md-12">
+                <!-- Tercera fila de botones -->
+              <div id="com">
+                    <button class="mx-2 btnum" id="b7" onclick='document.getElementById("montoDeposito").textContent = montoDeposito.textContent + "7" '>7</button>
+                    <button class="mx-2 btnum" id="b8" onclick='document.getElementById("montoDeposito").textContent = montoDeposito.textContent + "8" '>8</button>
+                    <button class="mx-2 btnum" id="b9" onclick='document.getElementById("montoDeposito").textContent = montoDeposito.textContent + "9" '>9</button>
+                    <button class="bg-success btnop" id="entrar" onclick="ingresarMonto()">ENTER</button>
+              </div>
+            </div>
+        
+            <div class="col-md-12">
+                <!-- Cuarta fila de botones -->
+              <div id="com" class="mb-3">
+                    <button class="mx-2 btnum" id="b10" onclick='document.getElementById("montoDeposito").textContent = montoDeposito.textContent + "-" '>-</button>
+                    <button class="mx-2 btnum" id="b0" onclick='document.getElementById("montoDeposito").textContent = montoDeposito.textContent + "0" '>0</button>
+                    <button class="mx-2 btnum" id="b11" onclick='document.getElementById("montoDeposito").textContent = montoDeposito.textContent + "+" '>+</button>
+                    <button class="btnop">...</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+<!-- Fin de sección de botones -->
+    </div>
+    <!-- Fin de primera transacción -->
+
+
+    <!-- Segunda transacción del menú, retirar efectivo -->
+    <div class="secOp container-md" id="tresdos">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-12, col-md-8 capa7 ml-auto mb-2">
+          <div class="interfaz">
+              <!-- Div que contiene el logo de Pokémon Bank y a su vez una división -->
+            <img src="images/bgpokemon2.png" class="img-fluid rounded img-poke" alt="Logo pokémon bank"/>
+            <hr class="dividor" />
+          </div>
+
+          <!-- Saludo al usuario -->
+          <div id="inicio" class="container-md inicio">
+            <!-- Datos del usuario -->
+            <div class="datos">
+              <p class="nombreUser" id="nombreUser2"></p>
+              <p class="cuentaUser" id="cuentaUser2"></p>
+          </div>
+          <br>
+          <br>
+          <div class="saldos">
+            <p class="labelInicial" id="labelInicial2"></p>
+            <p class="labelActual" id="labelActual2"></p>
+          </div>
+                <br/><br/>
+                <!-- Span en el cual se escribirá el PIN de cuenta -->
+                <span class="text-center text-light" id="montoRetiro"></span>
+                <br/>
+                <hr class="guion" id="guion2" />
+              
+
+                <div class="btn-pie pt-5">
+                  <!-- Botón para retroceder -->
+                <button id="atras" class="bg-danger px-3 py-2 text-light btnAtras" onclick="retroceder()">Atrás</button>
+                <!-- Botón para imprimir recibo en pdf -->
+                <button id="pdf" class="bg-success px-3 py-2 text-light" onclick="printPDF()">Imprimir recibo</button>
+                </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de Botones del cajero -->
+    <div id="botones">
+        
+      <div class="container d-flex justify-content-center">
+        <div class="row">
+          <div class="col-md-12 btnAtm">
+          <!-- Primera fila de botones -->
+            <div id="com" class="mt-3">
+                <button class="mx-2 btnum" id="b1"  onclick='document.getElementById("montoRetiro").textContent = montoRetiro.textContent + "1" '>1</button>
+                <button class="mx-2 btnum" id="b2"  onclick='document.getElementById("montoRetiro").textContent = montoRetiro.textContent + "2" '>2</button>
+                <button class="mx-2 btnum" id="b3"  onclick='document.getElementById("montoRetiro").textContent = montoRetiro.textContent + "3" '>3</button>
+                <button class="bg-danger btnop" id="cancelar" onclick="salir()">CANCEL</button>
+            </div>
+        
+            <div class="col-md-12">
+              <!-- Segunda fila de botones -->
+              <div id="com">
+                    <button class="mx-2 btnum" id="b4" onclick='document.getElementById("montoRetiro").textContent = montoRetiro.textContent + "4" '>4</button>
+                    <button class="mx-2 btnum" id="b5" onclick='document.getElementById("montoRetiro").textContent = montoRetiro.textContent + "5" '>5</button>
+                    <button class="mx-2 btnum" id="b6" onclick='document.getElementById("montoRetiro").textContent = montoRetiro.textContent + "6" '>6</button>
+                    <button class="bg-warning btnop" id="limpiar" onclick='document.getElementById("montoRetiro").textContent = "" '>CLEAR</button>
+              </div>
+            </div>
+        
+            <div class="col-md-12">
+                <!-- Tercera fila de botones -->
+              <div id="com">
+                    <button class="mx-2 btnum" id="b7" onclick='document.getElementById("montoRetiro").textContent = montoRetiro.textContent + "7" '>7</button>
+                    <button class="mx-2 btnum" id="b8" onclick='document.getElementById("montoRetiro").textContent = montoRetiro.textContent + "8" '>8</button>
+                    <button class="mx-2 btnum" id="b9" onclick='document.getElementById("montoRetiro").textContent = montoRetiro.textContent + "9" '>9</button>
+                    <button class="bg-success btnop" id="entrar" onclick="retirarMonto()">ENTER</button>
+              </div>
+            </div>
+        
+            <div class="col-md-12">
+                <!-- Cuarta fila de botones -->
+              <div id="com" class="mb-3">
+                    <button class="mx-2 btnum" id="b10" onclick='document.getElementById("montoRetiro").textContent = montoRetiro.textContent + "-" '>-</button>
+                    <button class="mx-2 btnum" id="b0" onclick='document.getElementById("montoRetiro").textContent = montoRetiro.textContent + "0" '>0</button>
+                    <button class="mx-2 btnum" id="b11" onclick='document.getElementById("montoRetiro").textContent = montoRetiro.textContent + "+" '>+</button>
+                    <button class="btnop">...</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Fin de sección de botones -->
+    </div>
+    <!-- Fin de segunda transacción -->
+
+
+
+
+
+<!-- Opción 4 de menú, pagar servicios -->
+<div class="cuartaOp container-md" id="tres-cuatro">
+  <div class="row d-flex justify-content-center">
+    <div class="col-sm-12, col-md-8 capa7 ml-auto mb-2">
+      <div class="interfaz">
+          <!-- Div que contiene el logo de Pokémon Bank y a su vez una división -->
+        <img src="images/bgpokemon2.png" class="img-fluid rounded img-poke" alt="Logo pokémon bank"/>
+        <hr class="dividor" />
+      </div>
+
+      <div id="inicio" class="container-md inicio">
+    
+      <!-- Div que contiene las opciones de transacciones -->
+      <div class="servicios">
+   
+          <!-- Logo del cajero Pokémon Bank     -->
+          <img src="images/bgpokemon.png" class="img-fluid rounded img-poke2 mb-1" alt="Logo pokémon bank"/>
+          <!-- Div del Segundo bloque -->
+          <div class="bloque-servicios mt-4">
+              <button id="energia" onclick="mostrarEnergia()">Energía</button>
+              <button id="agua" onclick="mostrarAgua()">Agua</button>
+              <button id="internet" onclick="mostrarInternet()">Internet</button>
+          </div>
+          <!-- Botón para salir -->
+          <button id="salir" class="bg-danger mt-5" onclick="retroceder()">Atrás</button>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin de cuarta transacción -->
+
+
+
+
+
+<!-- ventana de pago de energía -->
+<div class="pagoLuz container-md" id="capa-energia">
+  <div class="row d-flex justify-content-center">
+    <div class="col-sm-12, col-md-8 capa6 ml-auto mb-2">
+      <div class="interfaz">
+          <!-- Div que contiene el logo de Pokémon Bank y a su vez una división -->
+        <img src="images/bgpokemon2.png" class="img-fluid rounded img-poke" alt="Logo pokémon bank"/>
+        <hr class="dividor" />
+      </div>
+
+      <div id="inicio" class="container-md inicio mt-5 pt-5">
+            <!-- Span en el cual se escribirá el monto a pagar -->
+            <span class="text-center text-light" id="payEnergia"></span>
+            <br/>
+            <hr class="guion " id="guion" />
+                
+            <div class="btn-pie pt-5 mt-5">
+                <!-- Botón para retroceder -->
+                <button id="atras" class="bg-danger px-3 py-2 text-light btnAtras" onclick="retroceder()">Atrás</button>
+                <!-- Botón para imprimir recibo en pdf -->
+                <button id="pdf" class="bg-success px-3 py-2 text-light" onclick="printPDF()">Imprimir recibo</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Sección de Botones del cajero -->
+<div id="botones">
+    
+  <div class="container d-flex justify-content-center">
+    <div class="row">
+      <div class="col-md-12 btnAtm">
+      <!-- Primera fila de botones -->
+        <div id="com" class="mt-3">
+            <button class="mx-2 btnum" id="b1"  onclick='document.getElementById("payEnergia").textContent = payEnergia.textContent + "1" '>1</button>
+            <button class="mx-2 btnum" id="b2"  onclick='document.getElementById("payEnergia").textContent = payEnergia.textContent + "2" '>2</button>
+            <button class="mx-2 btnum" id="b3"  onclick='document.getElementById("payEnergia").textContent = payEnergia.textContent + "3" '>3</button>
+            <button class="bg-danger btnop" id="cancelar" onclick="salir()">CANCEL</button>
+        </div>
+    
+        <div class="col-md-12">
+          <!-- Segunda fila de botones -->
+          <div id="com">
+                <button class="mx-2 btnum" id="b4" onclick='document.getElementById("payEnergia").textContent = payEnergia.textContent + "4" '>4</button>
+                <button class="mx-2 btnum" id="b5" onclick='document.getElementById("payEnergia").textContent = payEnergia.textContent + "5" '>5</button>
+                <button class="mx-2 btnum" id="b6" onclick='document.getElementById("payEnergia").textContent = payEnergia.textContent + "6" '>6</button>
+                <button class="bg-warning btnop" id="limpiar" onclick='document.getElementById("payEnergia").textContent = "" '>CLEAR</button>
+          </div>
+        </div>
+    
+        <div class="col-md-12">
+            <!-- Tercera fila de botones -->
+          <div id="com">
+                <button class="mx-2 btnum" id="b7" onclick='document.getElementById("payEnergia").textContent = payEnergia.textContent + "7" '>7</button>
+                <button class="mx-2 btnum" id="b8" onclick='document.getElementById("payEnergia").textContent = payEnergia.textContent + "8" '>8</button>
+                <button class="mx-2 btnum" id="b9" onclick='document.getElementById("payEnergia").textContent = payEnergia.textContent + "9" '>9</button>
+                <button class="bg-success btnop" id="entrar" onclick="pagoEnergia()">ENTER</button>
+          </div>
+        </div>
+    
+        <div class="col-md-12">
+            <!-- Cuarta fila de botones -->
+          <div id="com" class="mb-3">
+                <button class="mx-2 btnum" id="b10" onclick='document.getElementById("payEnergia").textContent = payEnergia.textContent + "-" '>-</button>
+                <button class="mx-2 btnum" id="b0" onclick='document.getElementById("payEnergia").textContent = payEnergia.textContent + "0" '>0</button>
+                <button class="mx-2 btnum" id="b11" onclick='document.getElementById("payEnergia").textContent = payEnergia.textContent + "+" '>+</button>
+                <button class="btnop">...</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+<!-- Fin de sección de botones -->
+</div>
+<!-- Fin de ventana de pago de energía -->
+
+
+<!-- ventana de pago de agua -->
+<div class="pagoAgua container-md" id="capa-agua">
+  <div class="row d-flex justify-content-center">
+    <div class="col-sm-12, col-md-8 capa6 ml-auto mb-2">
+      <div class="interfaz">
+          <!-- Div que contiene el logo de Pokémon Bank y a su vez una división -->
+        <img src="images/bgpokemon2.png" class="img-fluid rounded img-poke" alt="Logo pokémon bank"/>
+        <hr class="dividor" />
+      </div>
+
+      <div id="inicio" class="container-md inicio mt-5 pt-5">
+            <!-- Span en el cual se escribirá el monto a pagar -->
+            <span class="text-center text-light" id="payAgua"></span>
+            <br/>
+            <hr class="guion " id="guion" />
+                
+            <div class="btn-pie pt-5 mt-5">
+                <!-- Botón para retroceder -->
+                <button id="atras" class="bg-danger px-3 py-2 text-light btnAtras" onclick="retroceder()">Atrás</button>
+                <!-- Botón para imprimir recibo en pdf -->
+                <button id="pdf" class="bg-success px-3 py-2 text-light" onclick="printPDF()">Imprimir recibo</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Sección de Botones del cajero -->
+<div id="botones">
+    
+  <div class="container d-flex justify-content-center">
+    <div class="row">
+      <div class="col-md-12 btnAtm">
+      <!-- Primera fila de botones -->
+        <div id="com" class="mt-3">
+            <button class="mx-2 btnum" id="b1"  onclick='document.getElementById("payAgua").textContent = payAgua.textContent + "1" '>1</button>
+            <button class="mx-2 btnum" id="b2"  onclick='document.getElementById("payAgua").textContent = payAgua.textContent + "2" '>2</button>
+            <button class="mx-2 btnum" id="b3"  onclick='document.getElementById("payAgua").textContent = payAgua.textContent + "3" '>3</button>
+            <button class="bg-danger btnop" id="cancelar" onclick="salir()">CANCEL</button>
+        </div>
+    
+        <div class="col-md-12">
+          <!-- Segunda fila de botones -->
+          <div id="com">
+                <button class="mx-2 btnum" id="b4" onclick='document.getElementById("payAgua").textContent = payAgua.textContent + "4" '>4</button>
+                <button class="mx-2 btnum" id="b5" onclick='document.getElementById("payAgua").textContent = payAgua.textContent + "5" '>5</button>
+                <button class="mx-2 btnum" id="b6" onclick='document.getElementById("payAgua").textContent = payAgua.textContent + "6" '>6</button>
+                <button class="bg-warning btnop" id="limpiar" onclick='document.getElementById("payAgua").textContent = "" '>CLEAR</button>
+          </div>
+        </div>
+    
+        <div class="col-md-12">
+            <!-- Tercera fila de botones -->
+          <div id="com">
+                <button class="mx-2 btnum" id="b7" onclick='document.getElementById("payAgua").textContent = payAgua.textContent + "7" '>7</button>
+                <button class="mx-2 btnum" id="b8" onclick='document.getElementById("payAgua").textContent = payAgua.textContent + "8" '>8</button>
+                <button class="mx-2 btnum" id="b9" onclick='document.getElementById("payAgua").textContent = payAgua.textContent + "9" '>9</button>
+                <button class="bg-success btnop" id="entrar" onclick="pagoAgua()">ENTER</button>
+          </div>
+        </div>
+    
+        <div class="col-md-12">
+            <!-- Cuarta fila de botones -->
+          <div id="com" class="mb-3">
+                <button class="mx-2 btnum" id="b10" onclick='document.getElementById("payAgua").textContent = payAgua.textContent + "-" '>-</button>
+                <button class="mx-2 btnum" id="b0" onclick='document.getElementById("payAgua").textContent = payAgua.textContent + "0" '>0</button>
+                <button class="mx-2 btnum" id="b11" onclick='document.getElementById("payAgua").textContent = payAgua.textContent + "+" '>+</button>
+                <button class="btnop">...</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+<!-- Fin de sección de botones -->
+</div>
+<!-- Fin de ventana de pago de agua -->
+
+<!-- ventana de pago de Internet -->
+<div class="pagoInternet container-md" id="capa-internet">
+  <div class="row d-flex justify-content-center">
+    <div class="col-sm-12, col-md-8 capa6 ml-auto mb-2">
+      <div class="interfaz">
+          <!-- Div que contiene el logo de Pokémon Bank y a su vez una división -->
+        <img src="images/bgpokemon2.png" class="img-fluid rounded img-poke" alt="Logo pokémon bank"/>
+        <hr class="dividor" />
+      </div>
+
+      <div id="inicio" class="container-md inicio mt-5 pt-5">
+            <!-- Span en el cual se escribirá el monto a pagar -->
+            <span class="text-center text-light" id="payInter"></span>
+            <br/>
+            <hr class="guion " id="guion" />
+                
+            <div class="btn-pie pt-5 mt-5">
+                <!-- Botón para retroceder -->
+                <button id="atras" class="bg-danger px-3 py-2 text-light btnAtras" onclick="retroceder()">Atrás</button>
+                <!-- Botón para imprimir recibo en pdf -->
+                <button id="pdf" class="bg-success px-3 py-2 text-light" onclick="printPDF()">Imprimir recibo</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Sección de Botones del cajero -->
+<div id="botones">
+    
+  <div class="container d-flex justify-content-center">
+    <div class="row">
+      <div class="col-md-12 btnAtm">
+      <!-- Primera fila de botones -->
+        <div id="com" class="mt-3">
+            <button class="mx-2 btnum" id="b1"  onclick='document.getElementById("payInter").textContent = payInter.textContent + "1" '>1</button>
+            <button class="mx-2 btnum" id="b2"  onclick='document.getElementById("payInter").textContent = payInter.textContent + "2" '>2</button>
+            <button class="mx-2 btnum" id="b3"  onclick='document.getElementById("payInter").textContent = payInter.textContent + "3" '>3</button>
+            <button class="bg-danger btnop" id="cancelar" onclick="salir()">CANCEL</button>
+        </div>
+    
+        <div class="col-md-12">
+          <!-- Segunda fila de botones -->
+          <div id="com">
+                <button class="mx-2 btnum" id="b4" onclick='document.getElementById("payInter").textContent = payInter.textContent + "4" '>4</button>
+                <button class="mx-2 btnum" id="b5" onclick='document.getElementById("payInter").textContent = payInter.textContent + "5" '>5</button>
+                <button class="mx-2 btnum" id="b6" onclick='document.getElementById("payInter").textContent = payInter.textContent + "6" '>6</button>
+                <button class="bg-warning btnop" id="limpiar" onclick='document.getElementById("payInter").textContent = "" '>CLEAR</button>
+          </div>
+        </div>
+    
+        <div class="col-md-12">
+            <!-- Tercera fila de botones -->
+          <div id="com">
+                <button class="mx-2 btnum" id="b7" onclick='document.getElementById("payInter").textContent = payInter.textContent + "7" '>7</button>
+                <button class="mx-2 btnum" id="b8" onclick='document.getElementById("payInter").textContent = payInter.textContent + "8" '>8</button>
+                <button class="mx-2 btnum" id="b9" onclick='document.getElementById("payInter").textContent = payInter.textContent + "9" '>9</button>
+                <button class="bg-success btnop" id="entrar" onclick="pagoInternet()">ENTER</button>
+          </div>
+        </div>
+    
+        <div class="col-md-12">
+            <!-- Cuarta fila de botones -->
+          <div id="com" class="mb-3">
+                <button class="mx-2 btnum" id="b10" onclick='document.getElementById("payInter").textContent = payInter.textContent + "-" '>-</button>
+                <button class="mx-2 btnum" id="b0" onclick='document.getElementById("payInter").textContent = payInter.textContent + "0" '>0</button>
+                <button class="mx-2 btnum" id="b11" onclick='document.getElementById("payInter").textContent = payInter.textContent + "+" '>+</button>
+                <button class="btnop">...</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+<!-- Fin de sección de botones -->
+</div>
+<!-- Fin de ventana de pago de Internet -->
 
 
 <!-- Sección de página de gráfico -->
-    <section class="quinta container-md">
+    <div class="quinta container-md" id="cinco">
       <div class="row d-flex justify-content-center">
         <div class="col-sm-12, col-md-8 capa5 ml-auto mb-2">
           <div class="interfaz">
@@ -204,64 +685,40 @@
           </div>
 
           <!-- Div que contendrá el gráfico, el cual se hará con librería Chart.js -->
-          <div class="graphic mt-4"></div>
+          <div class="graphic mt-4">
+              <canvas id="myGrafico" width="500" height="00"></canvas>
+          </div>
           <div class="opc">
               <!-- Botón salir -->
-            <span class="btnExit"><button id="btnexit">Salir</button></span>
+            <span class="btnExit"><button id="btnexit" onclick="retroceder()">Atrás</button></span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 <!-- Fin de sección de gráficos -->
 
-
-<!-- Sección de Botones del cajero -->
-    <section id="botones">
-      <div class="container d-flex justify-content-center">
-        <div class="row">
-          <div class="col-md-12 btnAtm">
-           <!-- Primera fila de botones -->
-            <div id="com" class="mt-3">
-                <button class="mx-2 btnum" id="b1">1</button>
-                <button class="mx-2 btnum" id="b2">2</button>
-                <button class="mx-2 btnum" id="b3">3</button>
-                <button class="bg-danger btnop" id="cancelar">CANCEL</button>
-            </div>
-
-            <div class="col-md-12">
-               <!-- Segunda fila de botones -->
-              <div id="com">
-                    <button class="mx-2 btnum" id="b4">4</button>
-                    <button class="mx-2 btnum" id="b5">5</button>
-                    <button class="mx-2 btnum" id="b6">6</button>
-                    <button class="bg-warning btnop" id="limpiar">CLEAR</button>
-              </div>
-            </div>
-
-            <div class="col-md-12">
-                <!-- Tercera fila de botones -->
-              <div id="com">
-                    <button class="mx-2 btnum" id="b7">7</button>
-                    <button class="mx-2 btnum" id="b8">8</button>
-                    <button class="mx-2 btnum" id="b9">9</button>
-                    <button class="bg-success btnop" id="entrar">ENTER</button>
-              </div>
-            </div>
-
-            <div class="col-md-12">
-                <!-- Cuarta fila de botones -->
-              <div id="com" class="mb-3">
-                    <button class="mx-2 btnum" id="b10">-</button>
-                    <button class="mx-2 btnum" id="b0">0</button>
-                    <button class="mx-2 btnum" id="b11">+</button>
-                    <button class="btnop">...</button>
-              </div>
-            </div>
-          </div>
-        </div>
+<!-- Ventana de salida -->
+<div class="salir container-md" id="exit">
+  <div class="row d-flex justify-content-center">
+    <div class="col-sm-12, col-md-8 capa-final">
+      <div class="interfaz">
+            <img  src="images/bgpokemon2.png" class="img-fluid rounded img-poke" alt="Logo pokémon bank"/>
+            <hr class="dividor"/>
       </div>
-    </section>
-<!-- Fin de sección de botones -->
+
+     <div class="bg-cuerpo">
+          <!-- Título de la ventana -->
+        <div class="titulo-salida text-center mt-5">
+          <h3 class="pb-5">¡Gracias por confiar en nosotros!</h3>
+          <h4 class="mb-5">¡Te esperamos pronto!</h4>
+          <img  src="images/bgpokemon2.png" class="img-fluid rounded img-poke my-4" alt="Logo pokémon bank"/>
+        </div>
+     </div>
+    </div>
+  </div>
+</div>
+<!-- Fin de Ventana de salida -->
+
 
  <!-- Pie de página -->
  <footer class="footer">
@@ -272,12 +729,20 @@
   </div>
 </footer>
 
-
-
-
 <!-- Vinculación de los archivos js a utilizar -->
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/pokebank.js"></script>
+    
+    <!-- LIbrería sweetalert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Librería de jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/jspdf.min.js"></script>
+
+    <!-- Librería chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    
   </body>
 </html>
